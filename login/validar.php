@@ -13,7 +13,7 @@ $filas=mysqli_num_rows($resultado);
 
 if($filas){
   
-    header("location:../menu/last_regis.php");
+    header("location:../menu/navbar.php");
 
 }else{
     ?>

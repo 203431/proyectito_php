@@ -11,8 +11,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+    <div class="containernav">
+        <div class= "navbar">
+            <img src="./logo.png" class="logo" alt="Main Logo">
+        <ul>
+            <li> <a href="../menu/navbar.php">Inicio</a></li>
+            <li> <a href="../menu/regis_all.php">Todos los registros</a></li>
+            <li> <a href="../menu/last_regis.php">Ultimo de los registros</a></li>
+            <li> <a href="../login">Cerrar sesion</a></li>
+        </ul>
+        </div>
+
+    </div>
     <div class="container__table">
-                <div class= "table__title">Total de registros</div>
+                <div class= "table__title">Ultima toma de datos</div>
                 <div class= "table__header">ID</div>
                 <div class= "table__header">Temperatura del aire</div>
                 <div class= "table__header">Humedad del aire</div>
