@@ -3,7 +3,6 @@
 #include <WiFi.h> //se carga la libreria para la conexcion a internet mediante WIFI
 #include <HTTPClient.h> //se carga la libreria para poder crear objetos para realizar peticiones
 
-
 #define trigPin 19 //pin trigger del sensor ultrasonico HC-SR04
 #define echoPin 21//pin echo del sensor ultrasonico HC-SR04
 #define DHTPIN 4 //pin del sensor DHT11
@@ -21,11 +20,11 @@ float suelo_porc; //variable para almacenar la humedad del suelo (en porcentaje)
 //const char* ssid = "INFINITUMPDN2_2.4"; //ssid de la red a conectarse
 //const char* password = "zXUQGRY0Ij"; //contraseña de la red a conectarse
 
-const char* ssid = "Moto23"; //ssid de la red a conectarse
-const char* password = "12345678"; //contraseña de la red a conectarse
+//const char* ssid = "Moto23"; //ssid de la red a conectarse
+//const char* password = "12345678"; //contraseña de la red a conectarse
 
-//const char* ssid = "G8 Powerade";
-//const char* password = "RB18_chec0";
+const char* ssid = "G8 Powerade";
+const char* password = "RB18_chec0";
 
 const int rs = 13, en = 12, d4 = 27, d5 = 26, d6 = 25, d7 = 33; //asignando a variable los pines del lcd
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7); //definicion de los pines en un objeto de la libreria para el control del LCD
@@ -208,7 +207,7 @@ void send_data(){
     HTTPClient http; //se crea el objeto http
     String data = "temperatura=" + String(temp) + "&humedad=" + String(hum)+ "&humedad_suelo="+String(suelo_porc) + "&estado="+String(bomba);
 
-    http.begin("http://192.168.1.155/var/www/html/aa/EspPost.php");
+    http.begin("http://192.168.146.13/connect/EspPost.php");
     http.addHeader("Content-Type", "application/x-www-form-urlencoded"); // Se define texto plano
 
     int response_status = http.POST(data); //Se envian los datos y se almacena la respuesta
