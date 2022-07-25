@@ -18,7 +18,7 @@ if ($con) {
 					
 					 $consulta = "INSERT INTO `plant_data`(`air_tem`, `hum_air`, `hum_floor`, `date`, `status_bomb`) VALUES ('$temperatura','$humedad','$humedad_suelo','$fecha_actual','$estado')";
 					 
-					$resultado = mysql_query($con, $consulta);
+					$resultado = mysqli_query($con, $consulta);
 					if ($resultado){
 						echo " Registo en base de datos OK! ";
 					} else {
