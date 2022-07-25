@@ -12,9 +12,7 @@ void setup() {
 void loop() {
   if(digitalRead(PIN_get)==HIGH){ //se evalua la lectura de señal HIGH o LOW del pin de datos (PIN_get), si detecta una señal de HIGH mandara una LOW al RELAY para cerrar el circuito
     digitalWrite(RELAY_PIN, LOW); //se manda una señal de LOW al RELAY para cerrar el circuito y encender la bomba
-  }else if(digitalRead(PIN_get)==LOW){ //si detecta una señal de LOW, mandarauna señal de HIGH al RELAY para apagar la bomba
-    digitalWrite(RELAY_PIN, HIGH); //se manda una señal de HGH al RELAY para abrir el circuito y apagar la bomba
-  }else{
+  }else{ //si detecta una señal de LOW, mandarauna señal de HIGH al RELAY para apagar la bomba
     digitalWrite(RELAY_PIN, HIGH); //se manda una señal de HGH al RELAY para abrir el circuito y apagar la bomba
   }
   delay(1000);
