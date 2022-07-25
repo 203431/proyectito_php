@@ -151,7 +151,7 @@ void loop() {
   lcd.print(" CM");
 
 
-  if(suelo_porc < 23){ //se evalua el porcentaje de humedad del suelo, si es menor al 23% la bomba debe encenderse
+  if(suelo_porc < 30){ //se evalua el porcentaje de humedad del suelo, si es menor al 23% la bomba debe encenderse
     digitalWrite(PIN_bomba, HIGH); //se manda una señal HIGH para encender la bomba
     bomba = true; //se guarda el valor de true como estada de la bomba para indicar que esta encendida
     Serial.print("Bomba state: "); //se imprime un mensaje en el puerto serial on el estado de la bomba actual
