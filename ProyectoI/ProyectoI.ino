@@ -208,7 +208,7 @@ void send_data(){
     HTTPClient http; //se crea el objeto http
     String data = "temperatura=" + String(temp) + "&humedad=" + String(hum)+ "&humedad_suelo="+String(suelo_porc) + "&estado="+String(bomba);
 
-    http.begin("http://192.168.100.155/var/www/html/aa/EspPost.php");
+    http.begin("http://192.168.1.86/var/www/html/aa/EspPost.php");
     http.addHeader("Content-Type", "application/x-www-form-urlencoded"); // Se define texto plano
 
     int response_status = http.POST(data); //Se envian los datos y se almacena la respuesta
